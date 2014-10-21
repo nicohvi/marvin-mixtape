@@ -1,14 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 body {
   flex: 1; 
   display: flex;
+  background: #f7f7f7;
+  font-family: 'Source Sans Pro';
+  text-rendering: optimizelegibility;
+}
+
+#main {
+  max-width: 1080px;
   flex-direction: column;
+  margin: 0 auto;
+  flex: 1;
 }
 
 input { 
   font-size: 22px;
   padding: 30px;
-  margin: 30px;
+  margin: 7.5px;
   flex: 1;
+  border: 1px solid #ddd;
 }
 
-div, input, section, html, form, body { display: flex; box-sizing: border-box; }
+input[type=submit] {
+  color: #f7f7f7;
+  background: #81b900;
+  border-color: #81b900;
+  text-align: center;
+  border-radius: 3px;
+}
+
+li, ul, div, input, section, html, form, body { display: flex; box-sizing: border-box; }
+
+ul, li { list-style: none; }
+ul { padding: 0; flex: 1;}
+
+

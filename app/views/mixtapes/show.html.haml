@@ -1,1 +1,7 @@
-%h2= "Yeah, I also listened to #{@mixtape.artist} some years ago."
+%h2= "Yeah, I also listened to #{@mixtape.artist.name} some years ago."
+
+%section.message
+  %p "I've totally made a sweet mix for you though, check it!"
+
+%section#playlist{ data: { id: @mixtape.artist.spotify_id } }
+  %ul.songs

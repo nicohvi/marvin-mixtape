@@ -1,2 +1,11 @@
-%form#search-form
-  = text_field :mixtape, :artist, placeholder: "So, what kind of music are you into?"
+%section.forms
+  %form#search-form
+    = text_field :spotify, :artist, placeholder: "So, what kind of music are you into?"
+  
+  = form_for @mixtape do |f|
+    = f.fields_for :artist do |artist_fields|
+      = artist_fields.hidden_field :spotify_id, id: 'spotify_id'
+      = artist_fields.hidden_field :name, id: 'artist_name'
+    = f.submit
+
+%ul#artists

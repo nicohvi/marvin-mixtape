@@ -3,21 +3,23 @@ class MixtapesController < ApplicationController
    
   def new
     @mixtape = Mixtape.new
+    @mixtape.artist = Artist.new
   end
 
   def create
     @mixtape = Mixtape.new(mixtape_params)
-    @mixtape.save ? redirect_to(@mixtape) : render('new')
+    pr params
+    pr mixtape_params
+    @mixtape.save ? redirect_to(@mixtape) : redirect_to(root_url)
   end
   
   def show
-    @mixtape.setup!
   end
 
   private
 
   def mixtape_params
-    params.require(:mixtape).permit(:artist)
+    params.require(:mixtape).permit(artist_attributes: [:spotify_id, :name])
   end
 
   def set_tape

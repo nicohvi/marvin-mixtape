@@ -1,4 +1,12 @@
 class Mixtape < ActiveRecord::Base
+  # Associations
+  has_one :artist  
+  accepts_nested_attributes_for :artist  
+  
+  # Validations
+  validates_presence_of :artist
+
+  # ActiveRecord Callbacks
   after_initialize :generate_slug
 
   def self.find(slug)

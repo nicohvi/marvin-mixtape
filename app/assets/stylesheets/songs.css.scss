@@ -1,0 +1,18 @@
+@import 'bourbon';
+
+.songs { flex-direction: column; }
+
+.song { 
+  padding: 10px 15px; 
+  border: 1px solid #ddd;
+  opacity: .6;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 4px #e6e6e6;
+  border-radius: 3px;
+  background: #fff;
+  @include transition(.2s all ease);
+}
+
+.song:hover { cursor: pointer; opacity: 1; }
+.song:last-of-type{  margin-bottom: 0; }
+

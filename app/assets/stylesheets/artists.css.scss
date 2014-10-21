@@ -1,0 +1,32 @@
+@import 'bourbon';
+
+.artist {
+  background: #fff;
+  min-width: calc(33.3333% - 15px);
+  max-width: calc(33.3333% - 15px);
+  padding: 30px;
+  margin: 7.5px;
+  border: 1px solid #ddd;
+  position: relative;
+  opacity: .6;
+  box-shadow: 0 2px 4px #e6e6e6;
+  @include transition(all .2s ease);
+  border-radius: 3px;
+  height: 300px;
+}
+
+.artist:hover, .artist.chosen { opacity: 1; }
+
+#artists { flex-wrap: wrap; }
+
+.artist span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 30px;
+  background: #81b900;
+  color: #f7f7f7;
+}
+
+.artist img { margin: 0 auto; }

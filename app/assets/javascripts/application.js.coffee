@@ -13,11 +13,16 @@
 #= require jquery
 #= require jquery_ujs
 #= require q
+#= require _
 
-#= require form
-#= require spotify
+#= require mixtape-form
+#= require spotify-searcher
+#= require playlist
+#= require mixtape
 
 $ ->
   options = {}
-  options.form = true if $('#search-form').length > 0
-  @spotify = new Spotify(options)
+  options.search = true if $('#search-form').length > 0
+  options.playlist = true if $('#playlist').length > 0
+
+  @mixtape = new Mixtape(options)
