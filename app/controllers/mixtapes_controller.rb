@@ -8,8 +8,6 @@ class MixtapesController < ApplicationController
 
   def create
     @mixtape = Mixtape.new(mixtape_params)
-    pr params
-    pr mixtape_params
     @mixtape.save ? redirect_to(@mixtape) : redirect_to(root_url)
   end
   
