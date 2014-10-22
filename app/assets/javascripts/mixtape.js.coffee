@@ -14,4 +14,7 @@ class Mixtape
     $(document).on 'mixtape_artist', (event, artist) =>
       @mixtapeForm.setArtist(artist)
 
+    $(document).on 'error', (event) =>
+      @mixtapeForm.disable()
+
 @Mixtape = Mixtape

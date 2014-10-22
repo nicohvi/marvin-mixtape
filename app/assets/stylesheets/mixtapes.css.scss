@@ -1,6 +1,5 @@
 #search-form { flex: 1; }
 
-.new_mixtape { 
-  width: 25%;
-  align-self: center;
-}
+.new_mixtape {  align-self: center; }
+.new_mixtape input { font-size: 16px; }
+.new_mixtape input:disabled { opacity: .5; }

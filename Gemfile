@@ -37,6 +37,7 @@ end
 
 group :test do
   gem 'guard'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'factory_girl', github: 'nicohvi/factory_girl'
   gem 'database_cleaner'

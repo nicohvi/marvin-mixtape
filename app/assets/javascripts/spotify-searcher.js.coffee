@@ -30,7 +30,7 @@ class SpotifySearcher
      ).then( (response) =>
       @listArtists(response.artists.items)
      ).fail( (error) =>
-      console.log(error)
+      $(document).trigger 'error'
      ).done()
 
   listArtists: (artists) ->
