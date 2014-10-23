@@ -37,6 +37,8 @@ end
 
 group :test do
   gem 'guard'
+  gem 'guard-rspec'
+  gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'factory_girl', github: 'nicohvi/factory_girl'
